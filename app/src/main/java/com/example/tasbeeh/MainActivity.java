@@ -32,12 +32,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clear(View view) {
+        int m = 0;
+        cnt.setText(String.valueOf(m));
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = prefs.edit();
-        int n2 = 0;
-        cnt.setText(String.valueOf(n2));
-        editor.putInt("n2", n2);
+        editor.putInt("n", m);
         editor.apply();
-
     }
 }
